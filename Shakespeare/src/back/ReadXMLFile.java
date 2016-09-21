@@ -79,16 +79,23 @@ public class ReadXMLFile {
     public int findString(String target, String full){
     	int lastIndex = 0;
     	int count = 0;
+    	String lowertarget = target.toLowerCase();
     	String lowerFull = full.toLowerCase();
-    	lowerFull = " " + lowerFull + " ";
-    	target = " " + target + " ";
+    	String [] splitFull = lowerFull.split(" ");
+    	String rebuiltFull = "";
+    	for(int i = 0; i < splitFull.length; i++){
+    		rebuiltFull += " " + splitFull[i] + " ";
+    	}
+    	
+    	//lowerFull = " " + lowerFull + " ";
+    	lowertarget = " " + lowertarget + " ";
   
     	while(lastIndex != -1){
-    		lastIndex = lowerFull.indexOf(target, lastIndex);
+    		lastIndex = rebuiltFull.indexOf(lowertarget, lastIndex);
     		
     		if(lastIndex != -1){
     			count++;
-    			lastIndex += target.length();
+    			lastIndex += lowertarget.length();
     		}
     	}
     	

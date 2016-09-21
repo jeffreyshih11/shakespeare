@@ -13,13 +13,14 @@
 <title>Shakespeare</title>
 </head>
 <body>
-
+	<center>
 	<h3>Who said what how many times?</h3>
 	<form action="result.jsp">
 		Word to Find: <input type="text" name="word">
+		Select Play
 		<p>
 			<select onchange="" id="setit" style="color: black"
-				size="25" name="playname">
+				size="37" name="playname">
 				<option value="a_and_c">The Tragedy of Antony and Cleopatra</option>
 				<option value="all_well">All's Well That Ends Well</option>
 				<option value="as_you">As You Like It</option>
@@ -64,7 +65,7 @@
 		<input type="submit" value="Submit">
 	</form>
 	
-	
+	</center>
 	
 </body>
 </html>
