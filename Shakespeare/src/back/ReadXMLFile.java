@@ -80,10 +80,9 @@ public class ReadXMLFile {
     	int lastIndex = 0;
     	int count = 0;
     	String lowerFull = full.toLowerCase();
-    	
-    	if(target.length() == 1){
-    		target = " " + target + " ";
-    	}
+    	lowerFull = " " + lowerFull + " ";
+    	target = " " + target + " ";
+  
     	while(lastIndex != -1){
     		lastIndex = lowerFull.indexOf(target, lastIndex);
     		

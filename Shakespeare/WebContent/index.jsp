@@ -5,7 +5,9 @@
 <%@ page import="org.w3c.dom.NodeList,javax.xml.parsers.DocumentBuilder" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
+<link type="text/css" rel="stylesheet" href="style.css" />
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Shakespeare</title>
@@ -14,10 +16,8 @@
 
 	<h3>Who said what how many times?</h3>
 	<form action="result.jsp">
-		Word to Find: <input type="text" name="word"> 
-		
-	
-		<p align="left">
+		Word to Find: <input type="text" name="word">
+		<p>
 			<select onchange="" id="setit" style="color: black"
 				size="25" name="playname">
 				<option value="a_and_c">The Tragedy of Antony and Cleopatra</option>
