@@ -81,10 +81,10 @@ public class ReadXMLFile {
     	int count = 0;
     	String lowertarget = target.toLowerCase();
     	String lowerFull = full.toLowerCase();
-    	String [] splitFull = lowerFull.split(" ");
+    	String [] splitFull = lowerFull.split("\\s*(=>|,|\\s)\\s*");
     	String rebuiltFull = "";
     	for(int i = 0; i < splitFull.length; i++){
-    		rebuiltFull += " " + splitFull[i] + " ";
+    		rebuiltFull += splitFull[i] + " ";
     	}
     	
     	//lowerFull = " " + lowerFull + " ";

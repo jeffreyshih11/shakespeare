@@ -76,7 +76,7 @@ public class Runner {
 	public static void main(String argv[]) {
 
 		Runner r = new Runner();
-		r.run("Richard", "hen_v");
+		r.run("art thou", "r_and_j");
 				
 	}
 }

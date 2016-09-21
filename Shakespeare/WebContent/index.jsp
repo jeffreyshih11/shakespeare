@@ -16,9 +16,9 @@
 	<center>
 	<h3>Who said what how many times?</h3>
 	<form action="result.jsp">
-		Word to Find: <input type="text" name="word">
-		Select Play
+		Word to Find: <input type="text" name="word"><br>
 		<p>
+		<center>Select Play</center>
 			<select onchange="" id="setit" style="color: black"
 				size="37" name="playname">
 				<option value="a_and_c">The Tragedy of Antony and Cleopatra</option>

@@ -23,7 +23,7 @@
 	
 	String playName = run.getPlay().getTitle();
 	
-	String graphData = "{\"chart\":{\"caption\":\"" + playName + "\",\"subCaption\":\"" + "\'" + finder + "\'" + " Count\",\"theme\":\"ocean\"},\"data\":[";
+	String graphData = "{\"chart\":{\"caption\":\"" + playName + "\",\"subCaption\":\"" + "Number of Times These Characters Said \'" + finder + "\'" + "\",\"theme\":\"ocean\"},\"data\":[";
 	String label = "{\"label\":\"";
 	String value = "\",\"value\":\"";
 	String close = "\"},";
@@ -68,8 +68,22 @@
 			graphData);
 %>
 <!--    Step 5: Render the chart    -->
-<%=lineChart.render()%>
+<%if(numActualSpeakers == 0){%>
+	<h2>No one said that!</h2>
+	<form action="index.jsp">
+		<input type="submit" value="Try Again">
+	</form>
+<%}else if(finder.length() < 1){%>
+<h2>Please Enter a Word to Search For</h2>
+<form action="index.jsp">
+	<input type="submit" value="Try Again">
+</form>
 
+<%}else{%>
+<p>
+<%=lineChart.render()%>
+</p>
+<%} %>
 
 </center>
 <body>
